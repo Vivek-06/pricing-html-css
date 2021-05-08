@@ -1,0 +1,296 @@
+body, img {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  background-color: hsl(240, 78%, 98%);
+}
+
+/*
+===================================
+    Headers
+===================================
+*/
+
+.heading {
+  margin-left: 850px;
+  margin-top: 100px;
+  color: hsl(232, 13%, 33%);
+}
+
+/*
+  =====================================
+  Image
+  =====================================
+*/
+
+.top-image {
+  position: absolute;
+  margin-top: -100px;
+  margin-left: 79.5%;
+}
+
+.bottom-image {
+  position: absolute;
+  margin-top: 540px;
+}
+
+/*
+  ==========================
+    Toggle Switch
+  ==========================
+*/
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: hsl(253, 20%, 49%);
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: rgb(255, 255, 255);
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked+.slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.switch-block {
+  display: flex;
+  justify-content: center;
+  color: hsl(232, 13%, 33%);
+  margin-top: 40px;
+}
+
+.slider:hover {
+  background-color: hsl(234, 14%, 74%);
+}
+
+.annually-label {
+  margin-top: 10px;
+  margin-right: 30px;
+  color: hsl(234, 14%, 74%);
+}
+
+.monthly-label {
+  margin-top: 10px;
+  margin-left: 30px;
+  color: hsl(234, 14%, 74%);
+}
+
+/*
+  =================================
+   Card Section
+  ==================================
+*/
+
+.card {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+/*
+  ===============================
+    Professional Card
+  ===============================
+*/
+
+.professional-card {
+  width: 20%;
+  height: 490px;
+  background: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  color: white;
+  text-align: center;
+  border-radius: 10px;
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+}
+
+.professional-card h3 {
+  font-size: 15px;
+  margin-top: 48px;
+}
+
+.price {
+  margin-top: 20px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.amount {
+  font-size: 70px;
+}
+
+.dollar {
+  font-size: 40px;
+  margin-top: 17px;
+  margin-right: 5px;
+}
+
+hr {
+  width: 280px;
+}
+
+.professional-card input {
+  height: 40px;
+  width: 280px;
+  margin-top: 15px;
+  border-radius: 5px;
+  background-color: white;
+  border: none;
+  color: hsl(233, 13%, 49%);
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.basic-card, .master-card {
+  position: relative;
+  height: 440px;
+  width: 20%;
+  margin-top: 20px;
+  background-color: white;
+  color: hsl(232, 13%, 33%);
+  text-align: center;
+}
+
+.basic-card input, .master-card input {
+  height: 40px;
+  width: 280px;
+  margin-top: 15px;
+  border-radius: 5px;
+  border: none;
+  font-size: 15px;
+  font-weight: 700;
+  background: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  color: white;
+}
+
+.basic-card {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.master-card {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.basic-card h3, .master-card h3 {
+  font-size: 15px;
+  margin-top: 30px;
+}
+
+.professional-card input:hover {
+  background: hsl(237, 63%, 64%);
+  color: white;
+  border: 1px solid white;
+}
+
+.basic-card input:hover, .master-card input:hover {
+  background: white;
+  color: hsl(233, 13%, 49%);
+  border: 1px solid hsl(233, 13%, 49%);
+}
+
+/*
+===============================
+ For mobile view
+===============================
+*/
+
+@media only screen and (max-width: 375px) {
+  .heading {
+    margin-top: 100px;
+    margin-left: 90px;
+  }
+
+  .switch-block {
+    margin-left: 60px;
+  }
+
+  .container {
+    position: absolute;
+  }
+  .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+  }
+
+  .basic-card, .professional-card, .master-card {
+    margin: 20px 0px 40px 60px;
+    width: 100%;
+    flex: 1;
+    border-radius: 10px;
+  }
+
+  .basic-card input,
+  .professional-card input,
+  .master-card input {
+    width: 250px;
+    margin-bottom: 10px;
+  }
+  
+  hr {
+    width: 250px;
+  }
+
+  .amount {
+    font-size: 60px;
+  }
+  .dollar {
+    font-size: 30px;
+    margin-top: 20px;
+    margin-right: 5px;
+  }
+
+  .top-image {
+    margin-left: 180px;
+    margin-top: 0px;
+  }
+  
+  .bottom-image{
+    opacity: 0;
+  }
+}
